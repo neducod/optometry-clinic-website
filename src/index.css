@@ -151,27 +151,3 @@ select:focus-visible,
 body {
   -webkit-font-smoothing: antialiased;
 }
-
-.eyebrow {
-  @apply text-xs font-semibold uppercase tracking-widest2 text-teal-600;
-}
-
-.container-lumen {
-  @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
-}
-
-.btn-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:bg-teal-600 hover:-translate-y-0.5 focus-visible:outline-gold-500;
-}
-
-.btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink-800/15 bg-transparent px-7 py-3.5 text-sm font-semibold text-ink-800 transition-all duration-300 hover:border-ink-800/40 hover:-translate-y-0.5;
-}
-
-.btn-gold {
-  @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-semibold text-ink-900 shadow-soft transition-all duration-300 hover:bg-gold-400 hover:-translate-y-0.5;
-}
-
-.card-lumen {
-  @apply rounded-2xl border border-ink-800/[0.06] bg-white shadow-card;
-}
