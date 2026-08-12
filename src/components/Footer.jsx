@@ -34,6 +34,7 @@ export default function Footer() {
           </p>
           <div className="mt-6 flex items-center gap-3">
             {[Instagram, Facebook, Twitter].map((Icon, i) => (
+                <a
               
                 key={i}
                 href="#"
