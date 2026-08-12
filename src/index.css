@@ -112,3 +112,66 @@ code {
   background: var(--code-bg);
 }
 */
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: #1B8F82;
+  color: #F8F9FA;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #C9A961;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-widest2 text-teal-600;
+}
+
+.container-lumen {
+  @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:bg-teal-600 hover:-translate-y-0.5 focus-visible:outline-gold-500;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink-800/15 bg-transparent px-7 py-3.5 text-sm font-semibold text-ink-800 transition-all duration-300 hover:border-ink-800/40 hover:-translate-y-0.5;
+}
+
+.btn-gold {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-semibold text-ink-900 shadow-soft transition-all duration-300 hover:bg-gold-400 hover:-translate-y-0.5;
+}
+
+.card-lumen {
+  @apply rounded-2xl border border-ink-800/[0.06] bg-white shadow-card;
+}
