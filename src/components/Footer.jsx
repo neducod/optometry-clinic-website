@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Eye, Instagram, Facebook, Twitter, ArrowRight, MapPin, Phone, Mail } from 'lucide-react'
+// import { Eye, Instagram, Facebook, Twitter, ArrowRight, MapPin, Phone, Mail } from 'lucide-react'
 import { useState } from 'react'
 
 const hours = [
@@ -25,7 +25,7 @@ export default function Footer() {
         <div>
           <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-extrabold text-white">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold-500 text-ink-900">
-              <Eye size={18} />
+              {/* <Eye size={18} /> */}
             </span>
             LUMEN Eye Care
           </Link>
@@ -33,7 +33,7 @@ export default function Footer() {
             A precision optometry studio dedicated to clarity, comfort, and considered eyewear.
           </p>
           <div className="mt-6 flex items-center gap-3">
-            {[Instagram, Facebook, Twitter].map((Icon, i) => (
+            {/* {[Instagram, Facebook, Twitter].map((Icon, i) => (
                 <a
               
                 key={i}
@@ -43,7 +43,7 @@ export default function Footer() {
               >
                 <Icon size={16} />
               </a>
-            ))}
+            ))} */}
           </div>
         </div>
 
@@ -68,9 +68,9 @@ export default function Footer() {
             ))}
           </ul>
           <ul className="mt-5 space-y-2.5 text-sm text-sand-100/70">
-            <li className="flex items-center gap-2"><Phone size={14} className="text-teal-400" /> +234 800 123 4567</li>
+            {/* <li className="flex items-center gap-2"><Phone size={14} className="text-teal-400" /> +234 800 123 4567</li>
             <li className="flex items-center gap-2"><Mail size={14} className="text-teal-400" /> hello@lumeneyecare.example</li>
-            <li className="flex items-center gap-2"><MapPin size={14} className="text-teal-400" /> Abuja, FCT, Nigeria</li>
+            <li className="flex items-center gap-2"><MapPin size={14} className="text-teal-400" /> Abuja, FCT, Nigeria</li> */}
           </ul>
         </div>
 
@@ -98,7 +98,7 @@ export default function Footer() {
                 aria-label="Subscribe"
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal-500 text-white transition-colors hover:bg-teal-600"
               >
-                <ArrowRight size={16} />
+                {/* <ArrowRight size={16} /> */}
               </button>
             </form>
           )}
