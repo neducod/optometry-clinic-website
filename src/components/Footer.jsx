@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-// import { Eye, Instagram, Facebook, Twitter, ArrowRight, MapPin, Phone, Mail } from 'lucide-react'
+import { Eye, Instagram, Facebook, Twitter, ArrowRight, MapPin, Phone, Mail } from 'lucide-react'
 import { useState } from 'react'
 
 const hours = [
