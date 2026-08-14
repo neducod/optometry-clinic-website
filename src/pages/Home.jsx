@@ -173,12 +173,12 @@ export default function Home() {
               LUMEN pairs clinical-grade diagnostics with a curated eyewear studio —
               so every exam ends not just with a prescription, but with frames worth wearing.
             </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <Link to="/booking" className="btn-primary">
+            <div className="mt-9 flex  gap-4 sm:flex-row">
+              <Link to="/booking" className="btn-primary text-teal-500 ">
                 Book an Examination
                 <ArrowRight size={16} />
               </Link>
-              <Link to="/services" className="btn-secondary">
+              <Link to="/services" className="btn-secondary text-teal-800">
                 Explore Services
               </Link>
             </div>
