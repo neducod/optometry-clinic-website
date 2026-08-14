@@ -50,10 +50,10 @@ export default function Footer() {
         <div>
           <h3 className="font-display text-sm font-semibold uppercase tracking-widest2 text-gold-500">Quick Links</h3>
           <ul className="mt-5 space-y-3 text-sm text-sand-100/70">
-            <li><Link to="/services" className="transition-colors hover:text-white">Our Services</Link></li>
-            <li><Link to="/team" className="transition-colors hover:text-white">Meet the Doctors</Link></li>
-            <li><Link to="/booking" className="transition-colors hover:text-white">Book an Appointment</Link></li>
-            <li><Link to="/contact" className="transition-colors hover:text-white">Contact & Directions</Link></li>
+            <li><Link to="/services" className="transition-colors hover:text-gray-600">Our Services</Link></li>
+            <li><Link to="/team" className="transition-colors hover:text-gray-600">Meet the Doctors</Link></li>
+            <li><Link to="/booking" className="transition-colors hover:text-gray-600">Book an Appointment</Link></li>
+            <li><Link to="/contact" className="transition-colors hover:text-gray-600">Contact & Directions</Link></li>
           </ul>
         </div>
 
