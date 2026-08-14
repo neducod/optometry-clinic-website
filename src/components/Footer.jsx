@@ -108,7 +108,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-lumen flex flex-col items-center justify-between gap-3 py-6 text-xs text-sand-100/50 sm:flex-row">
           <p>&copy; {new Date().getFullYear()} LUMEN Eye Care. All rights reserved.</p>
-          <p>Designed as a portfolio demonstration — not a real medical practice.</p>
+          <p>Designed as a portfolio demonstration; not a real medical practice.</p>
         </div>
       </div>
     </footer>
