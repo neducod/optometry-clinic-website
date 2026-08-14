@@ -114,7 +114,7 @@ export default function Contact() {
                       />
                     </label>
                   </div>
-                  <button type="submit" className="btn-primary mt-8 w-full sm:w-auto">
+                  <button type="submit" className="btn-primary mt-8 w-full sm:w-auto justify-center items-center btn-primary mt-8 cursor-pointer group relative flex gap-1.5 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition shadow-md w-60">
                     Send Message
                     <Send size={15} />
                   </button>
