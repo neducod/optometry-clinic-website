@@ -301,7 +301,8 @@ export default function Home() {
         </div>
       </section>
 
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
+      <TestimonialSlider/>
 
       {/* CLOSING CTA */}
       <section className="py-24 sm:py-32">
