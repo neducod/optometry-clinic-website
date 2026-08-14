@@ -8,7 +8,7 @@ import {
 import { Reveal, PageShell, stagger, staggerItem } from '../components/Motion.jsx'
 import ApertureMark from '../components/ApertureMark.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
-import TestimonialSlider from '../components/TestimonialSlider.jsx'
+// import TestimonialSlider from '../components/TestimonialSlider.jsx'
 
 const stats = [
   { value: '15+', label: 'Years of Clinical Experience' },
