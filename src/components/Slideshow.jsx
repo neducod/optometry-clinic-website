@@ -106,27 +106,10 @@ export default function OptometrySlider() {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
-      {/* Clinic Bar Top Info */}
-      <div className="flex flex-wrap justify-between items-center bg-sky-900/40 border border-sky-800/50 rounded-t-2xl px-6 py-3 text-xs md:text-sm text-sky-200 gap-4 backdrop-blur-sm">
-        <div className="flex items-center gap-6">
-          <span className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-sky-400" /> Mon - Sat: 8:30 AM - 6:00 PM
-          </span>
-          <span className="hidden sm:flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Accepting Most Vision Insurance Plans
-          </span>
-        </div>
-        <a 
-          href="tel:1234567890" 
-          className="flex items-center gap-2 text-white font-semibold hover:text-sky-300 transition-colors ml-auto sm:ml-0"
-        >
-          <Phone className="w-4 h-4 text-sky-400" /> (555) 234-5678
-        </a>
-      </div>
 
       {/* Main Slider Container */}
       <div 
-        className="relative overflow-hidden rounded-b-2xl shadow-2xl bg-slate-950 border-x border-b border-slate-800 min-h-[550px] md:min-h-[500px]"
+        className="relative overflow-hidden rounded-b-2xl shadow-2xl bg-slate-950 border-x border-b border-slate-800 min-h-[550px] md:min-h-[600px]"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={handleTouchStart}
