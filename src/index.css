@@ -134,7 +134,7 @@ html {
 ::selection {
   background-color: #1B8F82;
   color: #F8F9FA;
-}
+} 
 
 /* Visible keyboard focus */
 a:focus-visible,
@@ -150,4 +150,13 @@ select:focus-visible,
 
 body {
   -webkit-font-smoothing: antialiased;
-}
+} 
+
+
+
+
+
+
+
+
+
