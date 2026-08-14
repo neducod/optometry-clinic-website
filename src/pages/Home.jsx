@@ -9,6 +9,11 @@ import { Reveal, PageShell, stagger, staggerItem } from '../components/Motion.js
 import ApertureMark from '../components/ApertureMark.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
+import OptometrySlider from '../components/Slideshow.jsx'
+
+
+
+
 const stats = [
   { value: '15+', label: 'Years of Clinical Experience' },
   { value: '10k+', label: 'Patients Served' },
@@ -299,6 +304,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <OptometrySlider/>
 
 
       {/* CLOSING CTA */}
