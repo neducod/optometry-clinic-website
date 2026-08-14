@@ -310,14 +310,14 @@ export default function Home() {
 
       {/* CLOSING CTA */}
       <section className="py-24 sm:py-32">
-        <Reveal className="container-lumen text-center">
+        <Reveal className="container-lumen text-center flex justify-center flex-col items-center">
           <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold text-ink-800 sm:text-4xl">
             Your eyes deserve more than a five-minute glance.
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-ink-400">
             Reserve a comprehensive examination and leave with clarity — in your prescription, and in your frames.
           </p>
-          <Link to="/booking" className="btn-primary mt-8">
+          <Link to="/booking" className="justify-center items-center btn-primary mt-8 cursor-pointer group relative flex gap-1.5 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition shadow-md w-60">
             Book an Examination
             <ArrowRight size={16} />
           </Link>
