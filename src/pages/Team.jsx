@@ -55,6 +55,7 @@ export default function Team() {
                     className="h-full w-full"
                     tone={member.tone}
                   />
+                  {/* <img src={team.image} alt="" /> */}
                 </div>
                 <div className="flex flex-1 flex-col p-7">
                   <p className="eyebrow">{member.role}</p>
