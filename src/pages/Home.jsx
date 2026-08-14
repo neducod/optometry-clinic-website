@@ -8,7 +8,6 @@ import {
 import { Reveal, PageShell, stagger, staggerItem } from '../components/Motion.jsx'
 import ApertureMark from '../components/ApertureMark.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
-// import TestimonialSlider from '../components/TestimonialSlider.jsx'
 
 const stats = [
   { value: '15+', label: 'Years of Clinical Experience' },
@@ -301,8 +300,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <TestimonialSlider /> */}
-      <TestimonialSlider dark={false}/>
 
       {/* CLOSING CTA */}
       <section className="py-24 sm:py-32">
