@@ -99,7 +99,7 @@ export default function TestimonialSlider({
     >
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-2xl text-center">
-          <p className={`text-xs font-semibold uppercase tracking-[0.28em] ${theme.eyebrow}`}>
+          <p className={`text-xs text-black font-semibold uppercase tracking-[0.28em] ${theme.eyebrow}`}>
             Patient Stories
           </p>
           <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
