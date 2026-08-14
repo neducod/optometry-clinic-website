@@ -67,10 +67,10 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:block">
-          <Link to="/booking" className="btn-primary">
-            <CalendarCheck size={16} />
-            Book Appointment
+        <div className="hidden lg:block lg:p-10">
+          <Link to="/booking" className="btn-primary hover:text-teal-600">
+            {/* <CalendarCheck size={16} /> */}
+            Book an Appointment
           </Link>
         </div>
 

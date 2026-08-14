@@ -161,7 +161,7 @@ export default function Services() {
                 </ul>
               </div>
 
-              <Link to="/booking" className="btn-primary mt-10">
+              <Link to="/booking" className="btn-primary mt-8 justify-center items-center btn-primary mt-8 cursor-pointer group relative flex gap-1.5 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition shadow-md w-60">
                 Book This Service
                 <ArrowRight size={16} />
               </Link>
