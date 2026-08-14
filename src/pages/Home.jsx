@@ -236,7 +236,7 @@ export default function Home() {
       <TrustBar />
 
       {/* FEATURE GRID */}
-      <section className="py-24 sm:py-32">
+      <section className="py-24 sm:py-32 flex flex-col justify-between itmes-center md:pl-10">
         <div className="container-lumen">
           <Reveal className="max-w-xl">
             <p className="eyebrow">Core Specialties</p>
@@ -296,7 +296,7 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-              <Link to="/team" className="btn-secondary mt-8">
+              <Link to="/team" className="btn-secondary mt-8 justify-center items-center btn-primary mt-8 cursor-pointer group relative flex gap-1.5 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition shadow-md w-60">
                 Meet the Full Team
                 <ArrowRight size={16} />
               </Link>
