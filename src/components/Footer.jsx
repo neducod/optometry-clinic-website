@@ -20,7 +20,7 @@ export default function Footer() {
 
   return (
     <>
-    <footer className="border-t border-ink-800/[0.06] bg-ink-800 text-sand-100">
+    <footer className="border-t border-ink-800/[0.06] bg-ink-800 text-sand-100 p-4 sm:p-8 lg:p-10">
       <div className="container-lumen grid grid-cols-1 gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         <div>
           <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-extrabold text-white">
