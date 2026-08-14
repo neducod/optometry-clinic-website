@@ -30,7 +30,7 @@ const team = [
 export default function Team() {
   return (
     <PageShell>
-      <section className="pb-16 pt-20 sm:pt-28">
+      <section className="pb-16 pt-20 sm:pt-28 md:pl-10">
         <div className="container-lumen">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">The Practice</p>
@@ -44,7 +44,7 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="pb-28">
+      <section className="pb-28 md:pl-10">
         <div className="container-lumen grid grid-cols-1 gap-8 md:grid-cols-3">
           {team.map((member, i) => (
             <Reveal key={member.name} delay={i * 0.1}>

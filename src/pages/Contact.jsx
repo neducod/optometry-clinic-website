@@ -19,7 +19,7 @@ export default function Contact() {
 
   return (
     <PageShell>
-      <section className="pb-16 pt-20 sm:pt-28">
+      <section className="pb-16 pt-20 sm:pt-28 md:pl-10">
         <div className="container-lumen">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Get in Touch</p>
