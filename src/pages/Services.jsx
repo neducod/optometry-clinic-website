@@ -78,7 +78,7 @@ export default function Services() {
 
   return (
     <PageShell>
-      <section className="pb-16 pt-20 sm:pt-28">
+      <section className="pb-16 pt-20 sm:pt-28 md:pl-10">
         <div className="container-lumen">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">What We Offer</p>
@@ -92,7 +92,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="pb-28">
+      <section className="pb-28 md:pl-10">
         <div className="container-lumen grid grid-cols-1 gap-10 lg:grid-cols-[340px_1fr]">
           {/* Tab list */}
           <Reveal>
