@@ -172,7 +172,7 @@ export default function Footer() {
         {/* Footer Legal Sub-bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-white/50 pt-16 font-light">
           <div>
-            &copy; LUMEN Eye Care, {new Date().getFullYear()}. All rights reserved.
+            &copy; PORTFOLIO DEMO, {new Date().getFullYear()}. Josephine Jerome.
           </div>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-white/80 transition-colors">
