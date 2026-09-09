@@ -11,7 +11,7 @@ import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
 import OptometrySlider from '../components/Slideshow.jsx'
 
-
+import Hero from './Hero.jsx'
 
 
 
@@ -161,6 +161,7 @@ function TestimonialSlider() {
 export default function Home() {
   return (
     <PageShell>
+      <Hero/>
       {/* HERO */}
       {/* <section className="relative overflow-hidden pb-20 pt-16 sm:pb-28 sm:pt-20 lg:pb-36 lg:pt-24">
         <div className="pointer-events-none absolute inset-0 bg-iris-gradient" />
@@ -239,6 +240,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section> */}
+
 
 
  
