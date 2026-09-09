@@ -109,7 +109,7 @@ export default function OptometrySlider() {
 
       {/* Main Slider Container */}
       <div 
-        className="relative overflow-hidden rounded-b-2xl shadow-2xl bg-slate-950 border-x border-b border-slate-800 min-h-[550px] md:min-h-[600px]"
+        className="relative overflow-hidden rounded-b-2xl shadow-2xl border-x border-b border-slate-800 min-h-[550px] md:min-h-[600px]"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={handleTouchStart}
@@ -135,7 +135,7 @@ export default function OptometrySlider() {
                 
                 {/* Left Column: Text Content */}
                 <div className="lg:col-span-7 space-y-6 z-10">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-semibold uppercase tracking-wider">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-sky-500/30 text-sky-300 text-xs font-semibold uppercase tracking-wider">
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>{slide.tag}</span>
                   </div>
@@ -201,7 +201,7 @@ export default function OptometrySlider() {
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-slate-900/60 hover:bg-sky-500 text-white hover:text-slate-950 border border-slate-700/50 backdrop-blur-md transition-all transform hover:scale-110 focus:outline-none"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full  hover:bg-sky-500 text-white hover:text-slate-950 border border-slate-700/50 backdrop-blur-md transition-all transform hover:scale-110 focus:outline-none"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>

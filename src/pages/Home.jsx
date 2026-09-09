@@ -273,33 +273,6 @@ export default function Home() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <TrustBar />
 
       {/* FEATURE GRID */}
