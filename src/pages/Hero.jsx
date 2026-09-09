@@ -11,7 +11,7 @@ const Hero = () => {
   );
 
   return (
-    <section className="relative overflow-hidden bg-[#f8f9f5] font-sans text-gray-900 pb-20 pt-16 sm:pb-28 sm:pt-20 lg:pb-36 lg:pt-24 border-b border-gray-200/60">
+    <section className="relative overflow-hidden  font-sans text-gray-900 pb-20 pt-16 sm:pb-28 sm:pt-20 lg:pb-36 lg:pt-24 border-b border-gray-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
         
         {/* Left Column - Content & Copy */}
