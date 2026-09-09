@@ -148,26 +148,52 @@
 //     </header>
 //   )
 // }
+import React, { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronRight } from 'lucide-react';
 
-import React, { useState } from 'react';
+const navItems = [
+  { name: 'Home', to: '/', color: 'bg-emerald-500' },
+  { name: 'Services', to: '/services', color: 'bg-sky-300' },
+  { name: 'Doctors', to: '/team', color: 'bg-pink-500' },
+  { name: 'Contact', to: '/contact', color: 'bg-orange-300' },
+];
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = [
-    { name: 'Home', color: 'bg-emerald-500' },
-    { name: 'Services', color: 'bg-sky-300' },
-    { name: 'Doctors', color: 'bg-pink-500' },
-    { name: 'Contact', color: 'bg-orange-300' },
-  ];
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   return (
-    <nav className="relative w-full bg-[#f8f9f5] border-b border-gray-200/60 font-mono text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 font-mono text-sm ${
+        scrolled
+          ? 'bg-[#f8f9f5]/80 shadow-xs backdrop-blur-lg border-b border-gray-200/60 py-3'
+          : 'bg-[#f8f9f5] border-b border-gray-200/60 py-4'
+      }`}
+    >
+      <nav aria-label="Primary" className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="flex items-center justify-center text-[#1c0f13]">
+        <Link 
+          to="/" 
+          onClick={() => setIsOpen(false)} 
+          className="flex items-center gap-2 text-[#1c0f13] focus:outline-none"
+        >
+          <div className="flex items-center justify-center">
             <svg
               className="w-8 h-8 fill-current"
               viewBox="0 0 24 24"
@@ -177,106 +203,154 @@ const Navbar = () => {
               <path d="M19 9h-3.2l-1.8 4.5 2.5 5.5h-2.5l-2-4.4-2 4.4H7.5l2.5-5.5L8.2 9H5v2H3V7h18v4h-2z" />
             </svg>
           </div>
-          <span className="text-2xl font-black tracking-tighter text-[#1c0f13] lowercase">
+          <span className="text-2xl font-black tracking-tighter lowercase">
             teak
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center gap-6 bg-white/70 px-5 py-2.5 rounded-sm shadow-xs border border-gray-100/80">
+        <ul className="hidden lg:flex items-center gap-6 bg-white/70 px-5 py-2.5 rounded-sm shadow-xs border border-gray-100/80">
           {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={`#${item.name.toLowerCase()}`}
-              className="flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors font-medium text-xs tracking-tight"
-            >
-              <span className={`w-2.5 h-2.5 rounded-xs ${item.color} inline-block`} />
-              {item.name}
-            </a>
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  `relative flex items-center gap-2 font-medium text-xs tracking-tight transition-colors py-1 ${
+                    isActive ? 'text-gray-900 font-semibold' : 'text-gray-500 hover:text-gray-900'
+                  }`
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    <span className={`w-2.5 h-2.5 rounded-xs ${item.color} inline-block`} />
+                    <span>{item.name}</span>
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-underline"
+                        className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-[#1c0f13]"
+                      />
+                    )}
+                  </>
+                )}
+              </NavLink>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Desktop Action Buttons */}
         <div className="hidden md:flex items-center gap-6">
-          <a
-            href="#login"
-            className="text-gray-600 hover:text-gray-900 text-xs font-medium tracking-tight"
+          <Link
+            to="/login"
+            className="text-gray-600 hover:text-gray-900 text-xs font-medium tracking-tight transition-colors"
           >
             Log in
-          </a>
+          </Link>
 
-          <a
-            href="#book"
+          <Link
+            to="/booking"
             className="bg-[#1c0f13] hover:bg-black text-white text-xs font-medium px-5 py-2.5 rounded-full flex items-center gap-2 transition-all group"
           >
             <span>Book an appointment</span>
-            <span className="text-[10px] transform group-hover:translate-x-0.5 transition-transform">
-              ▶
-            </span>
-          </a>
+            <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+          </Link>
         </div>
 
-        {/* Hamburger Icon for Mobile/Tablet */}
+        {/* Hamburger Toggle (Mobile/Tablet) */}
         <div className="flex items-center md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
             className="text-[#1c0f13] hover:text-gray-600 focus:outline-none p-2"
-            aria-label="Toggle Menu"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
-            {isOpen ? (
-              // Close Icon (X)
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              // Hamburger Icon
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Drawer / Dropdown Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-[#f8f9f5] border-b border-gray-200 px-4 pt-2 pb-6 space-y-4">
-          <div className="flex flex-col gap-3 bg-white/70 p-4 rounded-md border border-gray-100/80">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={`#${item.name.toLowerCase()}`}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium text-xs tracking-tight py-1"
-              >
-                <span className={`w-2.5 h-2.5 rounded-xs ${item.color} inline-block`} />
-                {item.name}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-3 pt-2">
-            <a
-              href="#login"
+      {/* Mobile Animated Slide-Over Drawer */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {/* Backdrop */}
+            <motion.div
+              className="absolute inset-0 bg-[#1c0f13]/40 backdrop-blur-xs"
               onClick={() => setIsOpen(false)}
-              className="text-gray-600 hover:text-gray-900 text-xs font-medium tracking-tight px-1"
-            >
-              Log in
-            </a>
+            />
 
-            <a
-              href="#book"
-              onClick={() => setIsOpen(false)}
-              className="bg-[#1c0f13] text-white text-xs font-medium px-5 py-3 rounded-full flex items-center justify-center gap-2"
+            {/* Slide-out Panel */}
+            <motion.div
+              className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col bg-[#f8f9f5] p-6 shadow-2xl border-l border-gray-200"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 26, stiffness: 240 }}
             >
-              <span>Book an appointment</span>
-              <span className="text-[10px]">▶</span>
-            </a>
-          </div>
-        </div>
-      )}
-    </nav>
+              <div className="mb-8 flex items-center justify-between">
+                <span className="text-xl font-black tracking-tighter text-[#1c0f13] lowercase">
+                  teak
+                </span>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Close menu"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#1c0f13] shadow-xs border border-gray-100"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-3 bg-white/80 p-4 rounded-lg border border-gray-100 shadow-xs mb-6">
+                {navItems.map((item) => (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setIsOpen(false)}
+                    className={({ isActive }) =>
+                      `flex items-center gap-3 px-3 py-2 rounded-md font-medium text-xs tracking-tight transition-colors ${
+                        isActive ? 'bg-gray-100 text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
+                      }`
+                    }
+                  >
+                    <span className={`w-2.5 h-2.5 rounded-xs ${item.color} inline-block`} />
+                    {item.name}
+                  </NavLink>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-3 pt-2">
+                <Link
+                  to="/login"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-600 hover:text-gray-900 text-xs font-medium tracking-tight px-3 py-2"
+                >
+                  Log in
+                </Link>
+
+                <Link
+                  to="/booking"
+                  onClick={() => setIsOpen(false)}
+                  className="bg-[#1c0f13] hover:bg-black text-white text-xs font-medium px-5 py-3 rounded-full flex items-center justify-center gap-2 shadow-xs transition-colors"
+                >
+                  <span>Book an appointment</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+
+              <div className="mt-auto pt-8 border-t border-gray-200/60 text-xs text-gray-500">
+                <p className="font-medium text-gray-700">Open Mon–Sat, 9am–6pm</p>
+                <p className="mt-1">+234 800 123 4567</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 };
 
