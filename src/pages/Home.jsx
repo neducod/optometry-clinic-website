@@ -15,13 +15,6 @@ import OptometrySlider from '../components/Slideshow.jsx'
 
 
 
-const Hero = () => {
-  // Replace with your actual WhatsApp phone number (with country code, no + or spaces)
-  const whatsappNumber = '2348000000000'; 
-  const whatsappMessage = encodeURIComponent(
-    'Hello, I would like to book an eye examination appointment.'
-  );
-
 
 
 
