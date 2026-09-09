@@ -155,7 +155,7 @@ export default function Home() {
   return (
     <PageShell>
       {/* HERO */}
-      <section className="relative overflow-hidden pb-20 pt-16 sm:pb-28 sm:pt-20 lg:pb-36 lg:pt-24">
+      {/* <section className="relative overflow-hidden pb-20 pt-16 sm:pb-28 sm:pt-20 lg:pb-36 lg:pt-24">
         <div className="pointer-events-none absolute inset-0 bg-iris-gradient" />
         <div className="container-lumen relative grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <motion.div
@@ -231,7 +231,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <TrustBar />
 
