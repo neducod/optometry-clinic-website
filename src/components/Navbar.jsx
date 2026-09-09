@@ -177,12 +177,12 @@ const Navbar = () => {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
-
+//bg-[#5B6FB4] bg-[#f8f9f5
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 font-mono text-sm ${
         scrolled
-          ? 'bg-[#f8f9f5]/80 shadow-xs backdrop-blur-lg border-b border-gray-200/60 py-3'
+          ? 'bg-[#5B6FB4]/80 shadow-xs backdrop-blur-lg border-b border-gray-200/60 py-3'
           : 'bg-[#f8f9f5] border-b border-gray-200/60 py-4'
       }`}
     >
