@@ -177,7 +177,7 @@ const Navbar = () => {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
-//bg-[#5B6FB4] bg-[#f8f9f5
+//bg-[#5B6FB4] bg-[#f8f9f5 bg-slate-900/60
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 font-mono text-sm ${

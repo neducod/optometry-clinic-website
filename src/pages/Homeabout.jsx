@@ -128,7 +128,7 @@ export default function HospitalAboutUs() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-900 border-t border-b border-slate-800">
+      {/* <section className="py-20 bg-slate-900 border-t border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-white tracking-tight sm:text-4xl">
@@ -156,33 +156,31 @@ export default function HospitalAboutUs() {
             ))}
           </div>
         </div>
-      </section>
-
+      </section> */}
       {/* --- OUR CORE VALUES --- */}
-      <section className="py-20 bg-slate-950">
+      <section className="py-20 bg-[#5B6FB4] ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-white tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold text-black tracking-tight sm:text-4xl">
               Guided by Core Values
             </h2>
-            <p className="mt-4 text-slate-400">
+            <p className="mt-4 text-slate-800">
               Our culture shapes how we care for every patient and support every family.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {coreValues.map((value, idx) => (
-              <div key={idx} className="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+              <div key={idx} className="bg-white p-6 rounded-xl border border-slate-800">
                 <Heart className="w-6 h-6 text-emerald-400 mb-4" />
-                <h3 className="text-base font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{value.desc}</p>
+                <h3 className="text-base font-semibold text-black mb-2">{value.title}</h3>
+                <p className="text-sm text-slate-800 leading-relaxed">{value.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* --- CALL TO ACTION / EMERGENCY BAR --- */}
-      <section className="py-16 bg-gradient-to-r from-cyan-950 via-slate-900 to-slate-950 border-t border-slate-800">
+      <section className="py-16  border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <h2 className="text-2xl font-bold text-white">Need immediate care or a specialist consultation?</h2>
