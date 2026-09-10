@@ -164,7 +164,7 @@ export default function Home() {
   return (
     <PageShell>
       <Hero/>
-      
+      <Homeeabout/>
 
 
 
