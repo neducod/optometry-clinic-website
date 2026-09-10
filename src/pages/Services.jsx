@@ -83,15 +83,15 @@ export default function Services() {
 
   return (
     <PageShell>
-      <div className="bg-[#6373b7] text-white min-h-screen">
+      <div className="bg-[#f8f9f5] text-black min-h-screen">
         <section className="pb-12 pt-20 sm:pt-28 md:pl-10">
           <div className="container mx-auto px-6 max-w-7xl">
             <Reveal className="max-w-2xl">
-              <p className="text-xs uppercase tracking-widest text-white/70 font-medium">What We Offer</p>
-              <h1 className="mt-3 font-serif text-4xl font-normal text-white sm:text-5xl leading-tight">
+              <p className="text-xs uppercase tracking-widest text-black/70 font-medium">What We Offer</p>
+              <h1 className="mt-3 font-serif text-4xl font-normal text-black sm:text-5xl leading-tight">
                 Care built around precision
               </h1>
-              <p className="mt-4 text-base text-white/80 leading-relaxed font-light">
+              <p className="mt-4 text-base text-black/80 leading-relaxed font-light">
                 Every service starts with diagnostics, not guesswork. Select a specialty to see what's included.
               </p>
             </Reveal>
@@ -116,7 +116,7 @@ export default function Services() {
                       }`}
                     >
                       <span className={`h-2.5 w-2.5 shrink-0 rounded-xs ${item.accentColor}`} />
-                      <span className={`whitespace-nowrap text-sm tracking-wide lg:whitespace-normal ${isActive ? 'font-medium text-white' : 'text-white/70'}`}>
+                      <span className={`whitespace-nowrap text-sm tracking-wide lg:whitespace-normal ${isActive ? 'font-medium text-black' : 'text-black/70'}`}>
                         {item.title}
                       </span>
                     </button>
@@ -137,28 +137,28 @@ export default function Services() {
               >
                 <div className="flex items-center gap-3">
                   <span className={`h-3 w-3 rounded-xs ${s.accentColor}`} />
-                  <s.icon className="h-6 w-6 text-white/90" />
+                  <s.icon className="h-6 w-6 text-black/90" />
                 </div>
 
-                <h2 className="mt-6 font-serif text-3xl font-normal text-white sm:text-4xl">{s.title}</h2>
-                <p className="mt-3 max-w-xl text-white/80 text-base font-light leading-relaxed">{s.summary}</p>
+                <h2 className="mt-6 font-serif text-3xl font-normal text-black sm:text-4xl">{s.title}</h2>
+                <p className="mt-3 max-w-xl text-black/80 text-base font-light leading-relaxed">{s.summary}</p>
 
-                <div className="mt-8 flex flex-wrap gap-8 text-white/90">
+                <div className="mt-8 flex flex-wrap gap-8 text-black/90">
                   <div className="flex items-center gap-2 text-sm font-light">
-                    <Clock size={16} className="text-white/60" />
+                    <Clock size={16} className="text-black/60" />
                     <span>{s.duration}</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm font-light">
-                    <Tag size={16} className="text-white/60" />
+                    <Tag size={16} className="text-black/60" />
                     <span>Starting at {s.from}</span>
                   </div>
                 </div>
 
                 <div className="mt-8 border-t border-white/10 pt-8">
-                  <p className="text-xs font-medium uppercase tracking-widest text-white/60">What's included</p>
+                  <p className="text-xs font-medium uppercase tracking-widest text-black/60">What's included</p>
                   <ul className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {s.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-white/90 font-light">
+                      <li key={item} className="flex items-start gap-3 text-sm text-black/90 font-light">
                         <Check size={16} className="mt-0.5 shrink-0 text-emerald-300" />
                         {item}
                       </li>
