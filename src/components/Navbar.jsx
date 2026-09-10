@@ -204,7 +204,7 @@ const Navbar = () => {
             </svg>
           </div>
           <span className="text-2xl font-black tracking-tighter lowercase">
-            teak
+            lumen
           </span>
         </Link>
 
@@ -239,12 +239,12 @@ const Navbar = () => {
 
         {/* Desktop Action Buttons */}
         <div className="hidden md:flex items-center gap-6">
-          <Link
+          {/* <Link
             to="/login"
             className="text-gray-600 hover:text-gray-900 text-xs font-medium tracking-tight transition-colors"
           >
             Log in
-          </Link>
+          </Link> */}
 
           <Link
             to="/booking"
