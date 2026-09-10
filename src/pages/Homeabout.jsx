@@ -37,10 +37,10 @@ export default function HospitalAboutUs() {
   ];
 
   return (
-    <div className="bg-slate-900 text-slate-100 min-h-screen font-sans">
+    <div className="bg-[#5B6FB4]  text-slate-100 min-h-screen font-sans">
       
       {/* --- HERO SECTION --- */}
-      <section className="relative overflow-hidden border-b border-slate-800 bg-slate-950 py-20 lg:py-28">
+      <section className="relative overflow-hidden border-b border-slate-800 bg-[#5B6FB4] py-20 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950 to-slate-950" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -92,16 +92,16 @@ export default function HospitalAboutUs() {
       </section>
 
       {/* --- MISSION & STORY SECTION --- */}
-      <section className="py-20 bg-slate-950">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-white tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold text-black tracking-tight sm:text-4xl">
               Setting the standard for modern healthcare.
             </h2>
-            <p className="mt-6 text-slate-400 leading-relaxed">
+            <p className="mt-6 text-slate-800 leading-relaxed">
               Founded with the mission to bring accessible, elite-tier clinical services to all, St. Jude Regional Health Center integrates cutting-edge clinical research, smart technologies, and personalized patient care plans.
             </p>
-            <p className="mt-4 text-slate-400 leading-relaxed">
+            <p className="mt-4 text-slate-800 leading-relaxed">
               Our multidisciplinary care teams prioritize early detection, accurate diagnosis, and empathetic support at every phase of treatment.
             </p>
             <ul className="mt-8 space-y-3">
@@ -110,7 +110,7 @@ export default function HospitalAboutUs() {
                 "Fully Accredited Level 1 Trauma Facility",
                 "Dedicated International Patient Care Desk"
               ].map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3 text-slate-300">
+                <li key={idx} className="flex items-center gap-3 text-slate-700">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                   <span>{item}</span>
                 </li>
@@ -119,7 +119,6 @@ export default function HospitalAboutUs() {
           </div>
           <div className="relative">
             <div className="aspect-video lg:aspect-square rounded-2xl bg-slate-800 border border-slate-700 overflow-hidden relative flex items-center justify-center text-slate-500">
-              {/* Replace with an authentic hospital or care team photo */}
               <div className="text-center p-6">
                 <Users className="w-12 h-12 mx-auto mb-3 text-slate-600" />
                 <p className="text-sm font-medium">Image Placeholder: Care Team & Facility</p>
@@ -129,7 +128,6 @@ export default function HospitalAboutUs() {
         </div>
       </section>
 
-      {/* --- CENTERS OF EXCELLENCE --- */}
       <section className="py-20 bg-slate-900 border-t border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
