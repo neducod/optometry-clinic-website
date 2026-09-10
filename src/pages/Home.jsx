@@ -183,7 +183,7 @@ export default function Home() {
             </h2>
           </Reveal>
 
-          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="">
             {features.map((f, i) => (
               <Reveal key={f.title} delay={i * 0.1}>
                 <motion.div
