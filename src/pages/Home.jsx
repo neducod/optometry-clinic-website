@@ -163,83 +163,7 @@ export default function Home() {
   return (
     <PageShell>
       <Hero/>
-      {/* <section className="relative overflow-hidden pb-20 pt-16 sm:pb-28 sm:pt-20 lg:pb-36 lg:pt-24">
-        <div className="pointer-events-none absolute inset-0 bg-iris-gradient" />
-        <div className="container-lumen relative grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <p className="eyebrow">Optometry &amp; Eyewear Atelier</p>
-            <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-ink-800 sm:text-5xl lg:text-6xl">
-              Precision Vision.
-              <br />
-              <span className="text-teal-500">Elevated</span> Eyewear.
-            </h1>
-            <p className="mt-6 max-w-lg text-balance text-lg leading-relaxed text-ink-400">
-              LUMEN pairs clinical-grade diagnostics with a curated eyewear studio —
-              so every exam ends not just with a prescription, but with frames worth wearing.
-            </p>
-            <div className="mt-9 flex  gap-4 sm:flex-row">
-              <Link to="/booking" className="btn-primary text-teal-500 ">
-                Book an Examination
-                <ArrowRight size={16} />
-              </Link>
-              <Link to="/services" className="btn-secondary text-teal-800">
-                Explore Services
-              </Link>
-            </div>
-
-            <div className="mt-12 flex items-center gap-6">
-              <div className="flex -space-x-3">
-                {[0, 1, 2, 3].map((i) => (
-                  <div key={i} className="h-10 w-10 overflow-hidden rounded-full border-2 border-sand">
-                    <ImagePlaceholder alt={`Portrait of LUMEN patient ${i + 1}`} className="h-full w-full" tone="teal" />
-                  </div>
-                ))}
-              </div>
-              <div>
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={14} className="fill-gold-500 text-gold-500" />
-                  ))}
-                </div>
-                <p className="mt-1 text-xs font-medium text-ink-400">4.9 from 1,200+ reviews</p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto flex aspect-square w-full max-w-lg items-center justify-center"
-          >
-            <ApertureMark size={440} className="absolute inset-0 m-auto" />
-            <div className="relative aspect-[4/5] w-3/5 overflow-hidden rounded-3xl shadow-glow">
-              <ImagePlaceholder
-                alt="Optometrist conducting a precision digital eye examination at LUMEN Eye Care"
-                className="h-full w-full"
-                tone="ink"
-              />
-            </div>
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-4 left-2 flex items-center gap-3 rounded-2xl bg-white px-5 py-4 shadow-card sm:left-0"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-50 text-teal-600">
-                <ScanEye size={18} />
-              </span>
-              <div>
-                <p className="text-sm font-semibold text-ink-800">Digital Retina Mapping</p>
-                <p className="text-xs text-ink-400">Included in every exam</p>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section> */}
+      
 
 
 
@@ -345,6 +269,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Infobar/>
 
       <OptometrySlider/>
 
