@@ -182,7 +182,7 @@ export default function Footer() {
               Terms
             </Link>
           </div>
-          <div>Site by S/A</div>
+          {/* <div>Site by S/A</div>  */}
         </div>
 
       </div>

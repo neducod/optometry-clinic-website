@@ -9,10 +9,8 @@ import { Reveal, PageShell, stagger, staggerItem } from '../components/Motion.js
 import ApertureMark from '../components/ApertureMark.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
-import OptometrySlider from '../components/Slideshow.jsx'
 
 import Hero from './Hero.jsx'
-import Infobar from './Infobar.jsx'
 import Homeeabout from './Homeabout.jsx'
 
 
@@ -206,8 +204,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DOCTOR HIGHLIGHT */}
-      <section className="py-24 sm:py-32">
+      {/* <section className="py-24 sm:py-32">
         <div className="container-lumen">
           <div className="grid grid-cols-1 items-center gap-12 rounded-3xl bg-white p-8 shadow-card sm:p-12 lg:grid-cols-2 lg:p-16">
             <Reveal>
@@ -241,7 +238,7 @@ export default function Home() {
             </Reveal>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <Infobar/> */}
 
