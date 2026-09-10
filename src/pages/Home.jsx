@@ -243,9 +243,9 @@ export default function Home() {
         </div>
       </section>
 
-      <Infobar/>
+      {/* <Infobar/> */}
 
-      <OptometrySlider/>
+      {/* <OptometrySlider/> */}
 
 
       {/* CLOSING CTA */}
