@@ -12,6 +12,7 @@ import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 import OptometrySlider from '../components/Slideshow.jsx'
 
 import Hero from './Hero.jsx'
+import Infobar from './Infobar.jsx'
 
 
 
