@@ -73,8 +73,7 @@ export default function HospitalAboutUs() {
         </div>
       </section>
 
-      {/* --- STATS SECTION --- */}
-      <section className="border-b border-slate-800 bg-slate-900/50 py-12">
+       {/* <section className="border-b border-slate-800 bg-slate-900/50 py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -89,7 +88,7 @@ export default function HospitalAboutUs() {
             ))}
           </div>
         </div>
-      </section>
+      </section>  */}
 
       {/* --- MISSION & STORY SECTION --- */}
       <section className="py-20 bg-white">
@@ -180,7 +179,7 @@ export default function HospitalAboutUs() {
         </div>
       </section>
 
-      <section className="py-16  border-slate-800">
+      {/* <section className="py-16  border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <h2 className="text-2xl font-bold text-white">Need immediate care or a specialist consultation?</h2>
@@ -196,7 +195,7 @@ export default function HospitalAboutUs() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
     </div>
   );
